@@ -6,6 +6,7 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import "./tailwind.css";
+import * as Frigade from "@frigade/react";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -17,7 +18,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        {children}
+        <Frigade.Provider apiKey="api_public_OxphoPLJQj9LE4o6rmpDcyfO6b3FcXzidbpxquIPVavtqr75mEgqJre21GESfe6t">
+          {children}
+        </Frigade.Provider>
         <ScrollRestoration />
         <Scripts />
       </body>
