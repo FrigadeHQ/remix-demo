@@ -1,16 +1,18 @@
 import type { MetaFunction } from "@remix-run/node";
+import { Forms } from "../components/forms";
+
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
+    { title: "Frigade Remix Demo" },
+    { name: "description", content: "A simple demo that shows how to use Frigade with Remix" },
   ];
 };
 
 export default function Index() {
   return (
     <div className="font-sans p-4">
-
+        <Forms />
     </div>
   );
 }
